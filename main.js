@@ -294,7 +294,8 @@ var AppModule = /** @class */ (function () {
                     { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"] },
                     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_9__["LoginComponent"] },
                     { path: 'statistics', component: _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_27__["StatisticsComponent"] },
-                    { path: 'gallery', component: _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_22__["GalleryComponent"] }
+                    { path: 'gallery', component: _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_22__["GalleryComponent"] },
+                    { path: 'tournament', component: _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_22__["GalleryComponent"] }
                 ])
             ],
             entryComponents: [
@@ -428,7 +429,7 @@ var authService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n    <nav class=\"menu\" tabindex=\"0\">\n            <div class=\"smartphone-menu-trigger\"></div>\n          <header class=\"avatar\">\n                <img src=\"../../assets/img/logo.PNG\" />\n            <h2>Gorilla Game Lab</h2>\n          </header>\n            <ul>\n            <li tabindex=\"0\" (click)=\"navigateHome()\"routerlink=\"/home\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n            <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n            <li  tabindex=\"0\" class=\"icon-gallery\"><a (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></a></li>\n            <li  tabindex=\"0\" class=\"icon-users\"><a (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></a></li>\n          </ul>\n        </nav>\n        \n        <main>\n          <div class=\"helper\">\n                <div class=\"right\">\n                  <div class=\"filter\">\n                    <mat-form-field>\n                        <mat-select  class=\"example-radio-group\" placeholder=\"Filter by name\">\n\n                        <mat-option (click)=\"onDefault()\">Default</mat-option>\n                        <mat-option (click)=\"onUnknown()\">Unknown</mat-option>\n                        <mat-option (click)=\"onAfia()\">Afia</mat-option>\n                        <mat-option (click)=\"onAyana()\">Ayana</mat-option>\n                        <mat-option (click)=\"onJock()\">Jock</mat-option>\n                        <mat-option (click)=\"onKera()\">Kera</mat-option>\n                        <mat-option (click)=\"onKukena()\">Kukena</mat-option>\n                        <mat-option (click)=\"onRomina()\">Romina</mat-option>\n                        <mat-option (click)=\"onSalome()\">Salome</mat-option>\n                        <mat-option (click)=\"onTouni()\">Touni</mat-option>\n                  \n                  \n                        </mat-select>\n                      </mat-form-field>\n                    </div>\n                    <div class=\"row\"> \n                        <div class=\"column\" *ngFor=\"let photo of photo2 | reverse\">\n                        <img src=\"{{photo.value}}\"  class=\"imagepreview\" style=\"width: 100%;\" >\n                        <p> {{photo.name}}</p>\n                        <button mat-raised-button id=\"{{photo.key}}\"(click)=\"openDialog(photo.key)\">recognize me? </button>\n                        <br>\n                          <!-- <p>Result:{{dialogResult}}</p> -->\n                        </div>\n\n\n                </div> \n         </div>\n        \n        </div>\n\n       </main>\n </div>\n    \n"
+module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n    <nav class=\"menu\" tabindex=\"0\">\n            <div class=\"smartphone-menu-trigger\"></div>\n          <header class=\"avatar\">\n                <img src=\"../../assets/img/logo.PNG\" />\n            <h2>Gorilla Game Lab</h2>\n          </header>\n            <ul>\n            <li tabindex=\"0\" (click)=\"navigateHome()\"routerlink=\"/home\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n            <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n            <li  tabindex=\"0\" class=\"icon-gallery\"><a (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></a></li>\n            <li tabindex=\"0\" class=\"icon-trial\" (click)=\"navigateTrial()\" routerlink=\"/statistics\"><span>Trial</span></li>\n            <li  tabindex=\"0\" class=\"icon-users\"><a (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></a></li>\n          </ul>\n        </nav>\n        \n        <main>\n          <div class=\"helper\">\n                <div class=\"right\">\n                  <div class=\"filter\">\n                    <mat-form-field>\n                        <mat-select  class=\"example-radio-group\" placeholder=\"Filter by name\">\n\n                        <mat-option (click)=\"onDefault()\">Default</mat-option>\n                        <mat-option (click)=\"onUnknown()\">Unknown</mat-option>\n                        <mat-option (click)=\"onAfia()\">Afia</mat-option>\n                        <mat-option (click)=\"onAyana()\">Ayana</mat-option>\n                        <mat-option (click)=\"onJock()\">Jock</mat-option>\n                        <mat-option (click)=\"onKera()\">Kera</mat-option>\n                        <mat-option (click)=\"onKukena()\">Kukena</mat-option>\n                        <mat-option (click)=\"onRomina()\">Romina</mat-option>\n                        <mat-option (click)=\"onSalome()\">Salome</mat-option>\n                        <mat-option (click)=\"onTouni()\">Touni</mat-option>\n                  \n                  \n                        </mat-select>\n                      </mat-form-field>\n                    </div>\n                    <div class=\"row\"> \n                        <div class=\"column\" *ngFor=\"let photo of photo2 | reverse\">\n                        <img src=\"{{photo.value}}\"  class=\"imagepreview\" style=\"width: 100%;\" >\n                        <p> {{photo.name}}</p>\n                        <button mat-raised-button id=\"{{photo.key}}\"(click)=\"openDialog(photo.key)\">recognize me? </button>\n                        <br>\n                          <!-- <p>Result:{{dialogResult}}</p> -->\n                        </div>\n\n\n                </div> \n         </div>\n        \n        </div>\n\n       </main>\n </div>\n    \n"
 
 /***/ }),
 
@@ -439,7 +440,7 @@ module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{da
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".contrainer {\n  height: 300px;\n  padding: 1px; }\n\n.example-radio-group {\n  display: inline-flex;\n  flex-direction: column; }\n\n.row {\n  /* IE10 */\n  display: flex;\n  /* IE10 */\n  flex-wrap: wrap; }\n\n.column {\n  /* IE10 */\n  flex: 28%;\n  max-width: 28%;\n  margin-left: 35px;\n  margin-bottom: 20px; }\n\n.column button {\n    border: none;\n    padding: 2px;\n    background: none;\n    outline: none; }\n\n.column button:hover {\n    color: #ff3377; }\n\n.column img {\n    height: 200px;\n    vertical-align: middle;\n    width: 100%; }\n\n.column img:hover {\n    opacity: 0.6; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\n.filter {\n  text-align: right;\n  margin-right: 6%; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .column {\n    flex: 50%;\n    max-width: 50%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .column {\n    flex: 100%;\n    max-width: 100%; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
+module.exports = ".contrainer {\n  height: 300px;\n  padding: 1px; }\n\n.example-radio-group {\n  display: inline-flex;\n  flex-direction: column; }\n\n.row {\n  /* IE10 */\n  display: flex;\n  /* IE10 */\n  flex-wrap: wrap; }\n\n.column {\n  /* IE10 */\n  flex: 28%;\n  max-width: 28%;\n  margin-left: 35px;\n  margin-bottom: 20px; }\n\n.column button {\n    border: none;\n    padding: 2px;\n    background: none;\n    outline: none; }\n\n.column button:hover {\n    color: #ff3377; }\n\n.column img {\n    height: 200px;\n    vertical-align: middle;\n    width: 100%; }\n\n.column img:hover {\n    opacity: 0.6; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\n.filter {\n  text-align: right;\n  margin-right: 6%; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li.icon-trial {\n        background-image: url(\"http://www.entypo.com/images/tools.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .column {\n    flex: 50%;\n    max-width: 50%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .column {\n    flex: 100%;\n    max-width: 100%; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
 
 /***/ }),
 
@@ -516,6 +517,9 @@ var GalleryComponent = /** @class */ (function () {
     };
     GalleryComponent.prototype.navigateGallery = function () {
         this.router.navigate(['/gallery']);
+    };
+    GalleryComponent.prototype.navigateTrial = function () {
+        this.router.navigate(['/tournament']);
     };
     GalleryComponent.prototype.navigateStatistics = function () {
         this.router.navigate(['/statistics']);
@@ -705,7 +709,7 @@ var ReversePipe = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n<nav class=\"menu\" tabindex=\"0\">\n        <div class=\"smartphone-menu-trigger\"></div>\n      <header class=\"avatar\">\n            <img src=\"../../assets/img/logo.PNG\" />\n        <h2>Gorilla Game Lab</h2>\n      </header>\n        <ul>\n        <li tabindex=\"0\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n        <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n        <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n        <li  tabindex=\"0\" class=\"icon-users\" (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n      </ul>\n    </nav>\n    \n    <main>\n      <div class=\"helper\">\n            <div class=\"right\">\n                <div class=\"container\">\n                    <div class id=bigChart>\n                    <div class=\"charts\" id=\"smallChart\" #chartAll>\n                        </div>\n                    </div>\n                    <div *ngFor = \"let photo of photo2\" class=\"chartsA\" >\n                        <img src=\"{{photo.value}}\"/>\n                       <p> Last Captured on {{ photo.date }} at {{ photo.time }} </p>\n\n                    </div>\n                    </div>\n                    <div class=\"charts\" #chartA>\n                        <p> Maze A Last Used: {{LastUsedA}} at {{LastDateUsedA}}</p>\n                        <P> Duration: {{DurationA}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartB>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartC>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartD>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartE>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartF>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    \n\n\n                    </div>\n      </div>\n    </main>\n</div>\n\n\n"
+module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n<nav class=\"menu\" tabindex=\"0\">\n        <div class=\"smartphone-menu-trigger\"></div>\n      <header class=\"avatar\">\n            <img src=\"../../assets/img/logo.PNG\" />\n        <h2>Gorilla Game Lab</h2>\n      </header>\n        <ul>\n        <li tabindex=\"0\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n        <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n        <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n        <li tabindex=\"0\" class=\"icon-trial\" (click)=\"navigateTrial()\" routerlink=\"/statistics\"><span>Trial</span></li>\n        <li  tabindex=\"0\" class=\"icon-users\" (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n      </ul>\n    </nav>\n    \n    <main>\n      <div class=\"helper\">\n            <div class=\"right\">\n                <div class=\"container\">\n                    <div class id=bigChart>\n                    <div class=\"charts\" id=\"smallChart\" #chartAll>\n                        </div>\n                    </div>\n                    <div *ngFor = \"let photo of photo2\" class=\"chartsA\" >\n                        <img src=\"{{photo.value}}\"/>\n                       <p> Last Captured on {{ photo.date }} at {{ photo.time }} </p>\n\n                    </div>\n                    </div>\n                    <div class=\"charts\" #chartA>\n                        <p> Maze A Last Used: {{LastUsedA}} at {{LastDateUsedA}}</p>\n                        <P> Duration: {{DurationA}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartB>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartC>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartD>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartE>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartF>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    \n\n\n                    </div>\n      </div>\n    </main>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -716,7 +720,7 @@ module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{da
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".charts {\n  float: left; }\n\n.contrainer {\n  height: 300px;\n  padding: 1px; }\n\n.chartsA {\n  padding-bottom: 50px; }\n\n.chartsA img {\n    width: 450px;\n    height: 240px;\n    padding-top: 10px; }\n\n.chartsA p {\n    float: left;\n    margin-left: 4.2%; }\n\n#bigChart {\n  width: 50%;\n  float: left; }\n\n#smallChart {\n  width: 510px;\n  height: 300px; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative;\n      padding-bottom: 50%; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n  #bigChart {\n    width: 100%;\n    float: left; }\n  #smallChart {\n    width: 350px;\n    height: 200px; }\n  .chartsA {\n    padding-bottom: 100px; }\n    .chartsA img {\n      width: 350px;\n      height: 200px;\n      float: left; }\n    .chartsA p {\n      margin-left: 4.2%; } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
+module.exports = ".charts {\n  float: left; }\n\n.contrainer {\n  height: 300px;\n  padding: 1px; }\n\n.chartsA {\n  padding-bottom: 50px; }\n\n.chartsA img {\n    width: 450px;\n    height: 240px;\n    padding-top: 10px; }\n\n.chartsA p {\n    float: left;\n    margin-left: 4.2%; }\n\n#bigChart {\n  width: 50%;\n  float: left; }\n\n#smallChart {\n  width: 510px;\n  height: 300px; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li.icon-trial {\n        background-image: url(\"http://www.entypo.com/images/tools.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative;\n      padding-bottom: 50%; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n  #bigChart {\n    width: 100%;\n    float: left; }\n  #smallChart {\n    width: 350px;\n    height: 200px; }\n  .chartsA {\n    padding-bottom: 100px; }\n    .chartsA img {\n      width: 350px;\n      height: 200px;\n      float: left; }\n    .chartsA p {\n      margin-left: 4.2%; } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
 
 /***/ }),
 
@@ -832,12 +836,11 @@ var HomeComponent = /** @class */ (function () {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elAll.nativeElement); //this cleans graph whenever new value is added to database
             _this.monitorChartA(data);
             //REMOVE THISSSSS AND CALL ON ITS OWN WHEN BINDED TO THE RIGHT DATASET!!!!
-            _this.monitorChartC(data);
             _this.monitorChartD(data);
             _this.monitorChartE(data);
             _this.monitorChartF(data);
             _this.returnA(data);
-            _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB); //function that stores the values in observable taht is then being drawn on the next function call
+            _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB, _this.SensorMazeC); //function that stores the values in observable taht is then being drawn on the next function call
         });
         //retrieving data for live monitoring for maze B
         this.plotservice.getDataLive('SensorMazeB')
@@ -850,7 +853,19 @@ var HomeComponent = /** @class */ (function () {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elAll.nativeElement);
             _this.monitorChartB(data);
             _this.returnB(data); //function that stores the values in observable taht is then being drawn on the next function call
-            _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB);
+            _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB, _this.SensorMazeC);
+        });
+        this.plotservice.getDataLive('SensorMazeC')
+            .valueChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (items) {
+            return items.map(function (item) {
+                return item.value;
+            });
+        })).subscribe(function (data) {
+            plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elC.nativeElement);
+            plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elAll.nativeElement);
+            _this.monitorChartC(data);
+            _this.returnC(data); //function that stores the values in observable taht is then being drawn on the next function call
+            _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB, _this.SensorMazeC);
         });
         //retrieving data from maze A to plot the total usage of all mazes
         //retrieving the array of data from maze A to determine the last usage
@@ -897,6 +912,9 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.navigateHome = function () {
         this.router.navigate(['/home']);
     };
+    HomeComponent.prototype.navigateTrial = function () {
+        this.router.navigate(['/tournament']);
+    };
     HomeComponent.prototype.navigateStatistics = function () {
         this.router.navigate(['/statistics']);
     };
@@ -927,6 +945,13 @@ var HomeComponent = /** @class */ (function () {
     */
     HomeComponent.prototype.returnB = function (data) {
         this.SensorMazeB = data;
+    };
+    /*function storing the data for the values
+    *@param: data
+    * this obserable will be used in the MonitorChartAll plot
+    */
+    HomeComponent.prototype.returnC = function (data) {
+        this.SensorMazeC = data;
     };
     /*function that calculates the duration of the usage
     *@param: data - queries based on some treshold that is considered active
@@ -1187,7 +1212,7 @@ var HomeComponent = /** @class */ (function () {
     /* Function used to create monitoring chart for all mazes at the same time
      @param sensor Maze A - object that stores the values for sensor A
      */
-    HomeComponent.prototype.monitorChartAll = function (SensorMazeA, SensorMazeB) {
+    HomeComponent.prototype.monitorChartAll = function (SensorMazeA, SensorMazeB, SensorMazeC) {
         var element = this.elAll.nativeElement;
         var trace1 = {
             type: 'scatter',
@@ -1204,6 +1229,14 @@ var HomeComponent = /** @class */ (function () {
                 color: '#db4052',
             },
             name: 'Maze B',
+        };
+        var trace3 = {
+            type: 'scatter',
+            y: SensorMazeC,
+            line: {
+                color: '#6dc066',
+            },
+            name: 'Maze C',
         };
         var style = {
             margin: {
@@ -1222,7 +1255,7 @@ var HomeComponent = /** @class */ (function () {
                 family: 'Raleway, Arial'
             }
         };
-        var formattedData = [trace1, trace2];
+        var formattedData = [trace1, trace2, trace3];
         plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
         // Plotly.extendTraces(element,update,[0])
     };
@@ -1570,7 +1603,7 @@ var PlotService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <nav class=\"menu\" tabindex=\"0\">\n          <div class=\"smartphone-menu-trigger\"></div>\n        <header class=\"avatar\">\n              <img src=\"../../assets/img/logo.PNG\" />\n          <h2>Gorilla Game Lab</h2>\n        </header>\n          <ul>\n          <li tabindex=\"0\" class=\"icon-dashboard\" (click)=\"navigateHome()\" routerlink=\"/home\"><span>Live Monitoring</span></li>\n          <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n          <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n          <li  tabindex=\"0\" class=\"icon-users\"(click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n        </ul>\n      </nav>\n      \n      <main>\n        <div class=\"helper\">\n              <div class=\"right\">\n                      <div class=\"charts\" #Piechart>\n                      </div>\n\n                      <div  class=\"charts\" #Votechart>\n                        \n                        </div>\n                        \n                      <div  class=\"charts\" #Barchart2>\n                        \n                        </div>\n                      <div class=\"charts\">\n                            <div #Barchart>\n                              \n                              </div>\n                        <mat-form-field class=\"example-full-width\">\n                        <input matInput [min]=\"minDate\" [max]=\"maxDate\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\"  [ngModel]=\"selectedDate\" (ngModelChange)='selectedDate = onDateSelected($event)'>\n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                        </mat-form-field>\n                      </div>\n                     \n                      <!-- <p> Jock: {{Jock}}</p>\n                      <p> Kera: {{Kera}}</p>\n                      <p> Kukena: {{Kukena}}</p>\n                      <p> Touni: {{Touni}}</p>\n                      <p> Afia: {{Afia}}</p>\n                      <p> Ayana: {{Ayana}}</p>\n                      <p> Salome: {{Salome}}</p>\n                      <p> Romina: {{Romina}}</p> -->\n                     \n\n                </div>\n        </div>\n      </main>\n  </div>"
+module.exports = "<div class=\"wrapper\">\n  <nav class=\"menu\" tabindex=\"0\">\n          <div class=\"smartphone-menu-trigger\"></div>\n        <header class=\"avatar\">\n              <img src=\"../../assets/img/logo.PNG\" />\n          <h2>Gorilla Game Lab</h2>\n        </header>\n          <ul>\n          <li tabindex=\"0\" class=\"icon-dashboard\" (click)=\"navigateHome()\" routerlink=\"/home\"><span>Live Monitoring</span></li>\n          <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n          <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n          <li tabindex=\"0\" class=\"icon-trial\" (click)=\"navigateTrial()\" routerlink=\"/statistics\"><span>Trial</span></li>\n          <li  tabindex=\"0\" class=\"icon-users\"(click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n        </ul>\n      </nav>\n      \n      <main>\n        <div class=\"helper\">\n              <div class=\"right\">\n                      <div class=\"charts\" #Piechart>\n                      </div>\n\n                      <div  class=\"charts\" #Votechart>\n                        \n                        </div>\n                        \n                      <div  class=\"charts\" #Barchart2>\n                        \n                        </div>\n                      <div class=\"charts\">\n                            <div #Barchart>\n                              \n                              </div>\n                        <mat-form-field class=\"example-full-width\">\n                        <input matInput [min]=\"minDate\" [max]=\"maxDate\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\"  [ngModel]=\"selectedDate\" (ngModelChange)='selectedDate = onDateSelected($event)'>\n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                        </mat-form-field>\n                      </div>\n                     \n                      <!-- <p> Jock: {{Jock}}</p>\n                      <p> Kera: {{Kera}}</p>\n                      <p> Kukena: {{Kukena}}</p>\n                      <p> Touni: {{Touni}}</p>\n                      <p> Afia: {{Afia}}</p>\n                      <p> Ayana: {{Ayana}}</p>\n                      <p> Salome: {{Salome}}</p>\n                      <p> Romina: {{Romina}}</p> -->\n                     \n\n                </div>\n        </div>\n      </main>\n  </div>"
 
 /***/ }),
 
@@ -1581,7 +1614,7 @@ module.exports = "<div class=\"wrapper\">\n  <nav class=\"menu\" tabindex=\"0\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".charts {\n  float: left; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
+module.exports = ".charts {\n  float: left; }\n\nbody {\n  background: #161616; }\n\n.wrapper {\n  width: 100%;\n  margin: auto; }\n\nmain {\n  overflow: hidden;\n  margin-left: 20%;\n  margin-right: 1%; }\n\nmain .helper {\n    float: left;\n    padding: 0.2em 0em;\n    text-align: center;\n    border-radius: 20px; }\n\nmain .helper p {\n      font-size: 12px; }\n\nmain .helper span {\n      color: rgba(0, 0, 0, 0.2);\n      font-size: 0.4em;\n      display: block; }\n\n.mat-datepicker-content .mat-calendar {\n  zoom: 0.25; }\n\n.menu {\n  background: #3b444c;\n  height: 100vh;\n  width: 17%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  outline: none;\n  float: left; }\n\n.menu .avatar {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 2em 0.5em;\n    text-align: center; }\n\n.menu .avatar img {\n      width: 100px;\n      border-radius: 50%;\n      overflow: hidden;\n      border: 4px solid #fff;\n      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); }\n\n.menu .avatar h2 {\n      font-weight: normal;\n      margin-bottom: 0; }\n\n.menu ul {\n    list-style: none;\n    padding: 0.5em 0;\n    margin: 0; }\n\n.menu ul li {\n      padding: 0.5em 1em 0.5em 3em;\n      font-size: 0.95em;\n      font-weight: regular;\n      background-repeat: no-repeat;\n      background-position: left 15px center;\n      background-size: auto 20px;\n      transition: all 0.15s linear;\n      cursor: pointer; }\n\n.menu ul li.icon-gallery {\n        background-image: url(\"http://www.entypo.com/images/folder-images.svg\"); }\n\n.menu ul li.icon-dashboard {\n        background-image: url(\"http://www.entypo.com/images/gauge.svg\"); }\n\n.menu ul li.icon-users {\n        background-image: url(\"http://www.entypo.com/images/user.svg\"); }\n\n.menu ul li.icon-trial {\n        background-image: url(\"http://www.entypo.com/images/tools.svg\"); }\n\n.menu ul li.icon-stats {\n        background-image: url(\"http://www.entypo.com/images/line-graph.svg\"); }\n\n.menu ul li:hover {\n        background-color: rgba(0, 0, 0, 0.1); }\n\n.menu ul li:focus {\n        outline: none; }\n\n@media screen and (max-width: 900px) and (min-width: 400px) {\n  body {\n    padding-left: 10%; }\n  .menu {\n    width: 90px; }\n    .menu .avatar {\n      padding: 0.5em;\n      position: relative; }\n      .menu .avatar img {\n        width: 60px; }\n      .menu .avatar h2 {\n        opacity: 0;\n        position: absolute;\n        top: 50%;\n        left: 100px;\n        margin: 0;\n        min-width: 200px;\n        border-radius: 4px;\n        background: rgba(0, 0, 0, 0.4);\n        -webkit-transform: translate3d(-20px, -50%, 0);\n                transform: translate3d(-20px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n      .menu .avatar:hover h2 {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); }\n    .menu ul li {\n      height: 90px/1.5;\n      background-position: center center;\n      background-size: 30px auto;\n      position: relative; }\n      .menu ul li span {\n        opacity: 0;\n        position: absolute;\n        background: rgba(0, 0, 0, 0.5);\n        padding: 0.2em 0.5em;\n        border-radius: 4px;\n        top: 50%;\n        left: 80px;\n        -webkit-transform: translate3d(-15px, -50%, 0);\n                transform: translate3d(-15px, -50%, 0);\n        transition: all 0.15s ease-in-out; }\n        .menu ul li span:before {\n          content: '';\n          width: 0;\n          height: 0;\n          position: absolute;\n          top: 50%;\n          left: -5px;\n          border-top: 5px solid transparent;\n          border-bottom: 5px solid transparent;\n          border-right: 5px solid rgba(0, 0, 0, 0.5);\n          -webkit-transform: translateY(-50%);\n                  transform: translateY(-50%); }\n      .menu ul li:hover span {\n        opacity: 1;\n        -webkit-transform: translate3d(0px, -50%, 0);\n                transform: translate3d(0px, -50%, 0); } }\n\n@media screen and (max-width: 400px) {\n  body {\n    padding-left: 0; }\n  .menu {\n    width: 230px;\n    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);\n    -webkit-transform: translate3d(-230px, 0, 0);\n            transform: translate3d(-230px, 0, 0);\n    transition: all 0.3s ease-in-out; }\n    .menu .smartphone-menu-trigger {\n      width: 40px;\n      height: 40px;\n      position: absolute;\n      left: 100%;\n      background: #5bc995; }\n      .menu .smartphone-menu-trigger:before, .menu .smartphone-menu-trigger:after {\n        content: '';\n        width: 50%;\n        height: 2px;\n        background: #fff;\n        border-radius: 10px;\n        position: absolute;\n        top: 45%;\n        left: 50%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n      .menu .smartphone-menu-trigger:after {\n        top: 55%;\n        -webkit-transform: translate3d(-50%, -50%, 0);\n                transform: translate3d(-50%, -50%, 0); }\n    .menu ul li {\n      padding: 1em 1em 1em 3em;\n      font-size: 1.2em; }\n    .menu:focus {\n      -webkit-transform: translate3d(0, 0, 0);\n              transform: translate3d(0, 0, 0);\n      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6); }\n      .menu:focus .smartphone-menu-trigger {\n        pointer-events: none; } }\n"
 
 /***/ }),
 
@@ -1735,15 +1768,23 @@ var StatisticsComponent = /** @class */ (function () {
             .subscribe(function (data) {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elPie.nativeElement);
             _this.getSumA(data);
-            _this.pieChart(_this.SensorSumA, _this.SensorSumB);
+            _this.pieChart(_this.SensorSumA, _this.SensorSumB, _this.SensorSumC);
         });
         //retrieving data from maze B to plot the total usage of all mazes
         this.plotservice.getDataPie('SensorMazeB')
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (arr) { return arr.reduce(function (total, data) { return total + data; }); }))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (arr) { return arr.reduce(function (total, data) { return total + data; }, 0); }))
             .subscribe(function (data) {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elPie.nativeElement);
             _this.getSumB(data);
-            _this.pieChart(_this.SensorSumA, _this.SensorSumB);
+            _this.pieChart(_this.SensorSumA, _this.SensorSumB, _this.SensorSumC);
+        });
+        //retrieving data from maze C to plot the total usage of all mazes
+        this.plotservice.getDataPie('SensorMazeC')
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (arr) { return arr.reduce(function (total, data) { return total + data; }); }))
+            .subscribe(function (data) {
+            plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elPie.nativeElement);
+            _this.getSumC(data);
+            _this.pieChart(_this.SensorSumA, _this.SensorSumB, _this.SensorSumC);
         });
         //   //retirieving data to determine the average for maze A
         //    this.plotservice.getEntireSet('SensorMazeA')
@@ -1771,6 +1812,9 @@ var StatisticsComponent = /** @class */ (function () {
     };
     StatisticsComponent.prototype.navigateStatistics = function () {
         this.router.navigate(['/statistics']);
+    };
+    StatisticsComponent.prototype.navigateTrial = function () {
+        this.router.navigate(['/tournament']);
     };
     StatisticsComponent.prototype.navigateGallery = function () {
         this.router.navigate(['/gallery']);
@@ -1820,6 +1864,7 @@ var StatisticsComponent = /** @class */ (function () {
         }
         var dateSelected = date + '-' + month + '-' + yyyy;
         this.selectedDate = dateSelected; //storing the selected date in an object
+        console.log(this.selectedDate);
         // querying data for maze A, and calling functions to plot the chart
         this.plotservice.getAllData('SensorMazeA', this.selectedDate)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (arr) { return arr.reduce(function (total, data) { return total + data; }); }))
@@ -1833,7 +1878,15 @@ var StatisticsComponent = /** @class */ (function () {
             .subscribe(function (data) {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elBar.nativeElement);
             _this.getDatedSumB(data);
-            _this.barChart(_this.SensorDatedSumA, _this.SensorDatedSumB);
+            //this.barChart(this.SensorDatedSumA, this.SensorDatedSumB,this.SensorDatedSumC);
+        });
+        // querying data for maze B, and calling functions to plot the chart
+        this.plotservice.getAllData('SensorMazeC', this.selectedDate)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (arr) { return arr.reduce(function (total, data) { return total + data; }); }))
+            .subscribe(function (data) {
+            plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elBar.nativeElement);
+            _this.getDatedSumC(data);
+            _this.barChart(_this.SensorDatedSumA, _this.SensorDatedSumB, _this.SensorDatedSumC);
         });
     };
     /*function used to store all the records where the field value child has the following value
@@ -1903,6 +1956,10 @@ var StatisticsComponent = /** @class */ (function () {
     */
     StatisticsComponent.prototype.getSumB = function (data) {
         this.SensorSumB = data;
+        console.log(this.SensorSumB);
+    };
+    StatisticsComponent.prototype.getSumC = function (data) {
+        this.SensorSumC = data;
     };
     /* Function used to store the sum of maze A on a date selected
   @param data - object storing the queried data
@@ -1910,11 +1967,17 @@ var StatisticsComponent = /** @class */ (function () {
     StatisticsComponent.prototype.getDatedSumA = function (data) {
         this.SensorDatedSumA = data;
     };
-    /*function used to store the sum of maze A on a date selected
+    /*function used to store the sum of maze B on a date selected
       @param data - object storing the queried data
     */
     StatisticsComponent.prototype.getDatedSumB = function (data) {
         this.SensorDatedSumB = data;
+    };
+    /*function used to store the sum of maze B on a date selected
+      @param data - object storing the queried data
+    */
+    StatisticsComponent.prototype.getDatedSumC = function (data) {
+        this.SensorDatedSumC = data;
     };
     //function that stores the average picks of each Maze
     // getAverageA(data) {
@@ -1941,14 +2004,14 @@ var StatisticsComponent = /** @class */ (function () {
     *@param SensorSumB holds the total value for maze B
     * using the total values we can determine which maze has been used the most
     */
-    StatisticsComponent.prototype.pieChart = function (SensorSumA, SensorSumB) {
+    StatisticsComponent.prototype.pieChart = function (SensorSumA, SensorSumB, SensorSumC) {
         var element = this.elPie.nativeElement;
         var formattedData = [{
-                values: [SensorSumA, SensorSumB],
-                labels: ['Maze A', 'Maze B'],
+                values: [SensorSumA, SensorSumB, SensorSumC],
+                labels: ['Maze A', 'Maze B', 'Maze C'],
                 type: 'pie',
                 marker: {
-                    colors: ['#4682B4', '#db4052']
+                    colors: ['#4682B4', '#db4052', '#6dc066']
                 }
             }];
         var style = {
@@ -1977,7 +2040,7 @@ var StatisticsComponent = /** @class */ (function () {
     *@param SensorSumB holds the total value for maze B
     * using the total values we can determine which maze has been used the most on the given date
     */
-    StatisticsComponent.prototype.barChart = function (SensorSumA, SensorSumB) {
+    StatisticsComponent.prototype.barChart = function (SensorSumA, SensorSumB, SensorSumC) {
         var element = this.elBar.nativeElement;
         var trace1 = {
             x: ['Maze A'],
@@ -1999,7 +2062,7 @@ var StatisticsComponent = /** @class */ (function () {
         };
         var trace3 = {
             x: ['Maze C'],
-            y: [250],
+            y: [SensorSumC],
             width: [0.7],
             type: 'bar',
             marker: {
@@ -2209,7 +2272,7 @@ var StatisticsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"wrapper\">\n<div class=\"topDiv\">\n  <h1 class=\"heading\">How fast can YOU solve the maze?</h1>\n    <div *ngFor = \"let score of durationSession\" class=\"score\" >\n    <p> {{score}}</p>\n    </div>\n</div>    \n<div class=\"bottomDiv\">\n      <h1>{{durationLast}}</h1>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze A: </span><span style=\"font-size: 18px\">{{durationLastAB}}</span></p>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze B: </span><span style=\"font-size: 18px\">{{durationLastBC}}</span></p>\n      <button mat-button (click)=\"findAvgFunction()\"> Get Average</button>\n      <p><span style=\"font-size: 18px\">{{avg}}</span></p>\n    </div>\n\n\n</div>"
+module.exports = "\n<div class=\"wrapper\">\n<div class=\"topDiv\">\n    <p tabindex=\"0\" class=\"link\" (click)=\"navigateHome()\" routerlink=\"/home\"><span>Navigate Home</span></p>\n  <h1 class=\"heading\">How fast can YOU solve the maze?</h1>\n    \n    <div *ngFor = \"let score of durationSession\" class=\"score\" >\n      <p> {{score}}</p>\n    </div>\n</div>    \n<div class=\"bottomDiv\">\n      <h1>{{durationLast}}</h1>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze A: </span><span style=\"font-size: 18px\">{{durationLastAB}}</span></p>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze B: </span><span style=\"font-size: 18px\">{{durationLastBC}}</span></p>\n      <button mat-button (click)=\"findAvgFunction(); findAvgFunctionAB(); findAvgFunctionBC();\">Get Average</button>\n      <p><span style=\"font-size: 18px\"><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Total: </span>{{avg}} <span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\"> Maze A: </span> {{avgAB}} <span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\" >Maze B: </span> {{avgBC}}</span></p>\n    </div>\n\n\n</div>"
 
 /***/ }),
 
@@ -2220,7 +2283,7 @@ module.exports = "\n<div class=\"wrapper\">\n<div class=\"topDiv\">\n  <h1 class
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Orbitron\");\nhtml, body {\n  height: 100%; }\n.wrapper {\n  font-family: 'Orbitron', sans-serif;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0; }\n.wrapper .topDiv {\n    color: #4682B4;\n    position: absolute;\n    top: 0;\n    right: 2%;\n    left: 2%;\n    bottom: 50%;\n    overflow: auto;\n    text-align: left;\n    padding-left: 5%;\n    padding-right: 5%; }\n.wrapper .topDiv .score {\n      width: 10%;\n      display: inline-block;\n      line-height: 10px;\n      font-size: 18px; }\n.wrapper .topDiv .heading {\n      font-family: 'Raleway', 'Arial';\n      font-weight: 100;\n      text-align: center;\n      color: #fff;\n      font-size: 50px;\n      padding-bottom: 10px; }\n.wrapper .bottomDiv {\n    position: absolute;\n    font-size: 45px;\n    color: #db4052;\n    top: 50%;\n    right: 0;\n    left: 0;\n    bottom: 0;\n    text-align: center; }\n.wrapper .bottomDiv h1 {\n      margin: 0;\n      padding: 5 0; }\n.wrapper .bottomDiv p {\n      margin: 0;\n      padding: 5 0; }\n.wrapper .bottomDiv button:hover {\n      color: #4682B4; }\n"
+module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Orbitron\");\nhtml, body {\n  height: 100%; }\n.wrapper {\n  font-family: 'Orbitron', sans-serif;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0; }\n.wrapper .topDiv {\n    color: #4682B4;\n    position: absolute;\n    top: 0;\n    right: 2%;\n    left: 2%;\n    bottom: 50%;\n    overflow: auto;\n    text-align: left;\n    padding-left: 5%;\n    padding-right: 5%; }\n.wrapper .topDiv .link {\n      font-family: 'Raleway', 'Arial';\n      font-size: 15px;\n      color: #fff;\n      text-align: right; }\n.wrapper .topDiv .link:hover {\n        color: #db4052; }\n.wrapper .topDiv .score {\n      width: 10%;\n      display: inline-block;\n      line-height: 10px;\n      font-size: 18px; }\n.wrapper .topDiv .heading {\n      font-family: 'Raleway', 'Arial';\n      font-weight: 100;\n      text-align: center;\n      color: #fff;\n      font-size: 50px;\n      padding-bottom: 10px; }\n.wrapper .bottomDiv {\n    position: absolute;\n    font-size: 45px;\n    color: #db4052;\n    top: 50%;\n    right: 0;\n    left: 0;\n    bottom: 0;\n    text-align: center; }\n.wrapper .bottomDiv h1 {\n      margin: 0;\n      padding: 5 0; }\n.wrapper .bottomDiv p {\n      margin: 0;\n      padding: 5 0; }\n.wrapper .bottomDiv button:hover {\n      color: #4682B4; }\n"
 
 /***/ }),
 
@@ -2260,6 +2323,8 @@ var TournamentComponent = /** @class */ (function () {
         this.MiddleToArray = new Array(); //used to convert an observable to an array 
         this.EndToArray = new Array(); //used to convert an observable to an array
         this.durationSession = new Array(); //stores all the time differences for a current session(refresh page ends the session)
+        this.durationSessionA = new Array(); //stores all the time differences for a current session(refresh page ends the session)
+        this.durationSessionB = new Array(); //stores all the time differences for a current session(refresh page ends the session)
         this.findAvg = new Array();
         this.findAvgAB = new Array();
         this.findAvgBC = new Array();
@@ -2296,16 +2361,42 @@ var TournamentComponent = /** @class */ (function () {
         })).subscribe(function (data) {
             _this.storeLastEnd(data);
         });
-        //   //retrieves all the times when Maze B was triggered to find the average
-        // this.plotservice.getEntireSet('Tournament')
-        // .valueChanges().pipe(map(items => { //first map
-        //   return items.map(item => { //second map
-        //     return item.DetectedB;
-        //   })
-        // })).subscribe(data => {
-        //     this.storeTimesMiddle(data);
-        //     //this.DurationAllBC(this.MiddleToArray,this.EndToArray);
-        // })
+        //retrieves all the times when Maze A was triggered to find the average
+        this.subscriptionA = this.plotservice.getEntireSet('Tournament')
+            .valueChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (items) {
+            return items.map(function (item) {
+                return item.DetectedA;
+            });
+        })).subscribe(function (data) {
+            _this.storeTimesStart(data);
+            _this.DurationAll(_this.StartToArray, _this.EndToArray);
+            _this.DurationAllAB(_this.StartToArray, _this.MiddleToArray);
+            _this.subscriptionA.unsubscribe();
+        });
+        //retrieves all the times when Maze B was triggered to find the average
+        this.subscriptionB = this.plotservice.getEntireSet('Tournament')
+            .valueChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (items) {
+            return items.map(function (item) {
+                return item.DetectedB;
+            });
+        })).subscribe(function (data) {
+            _this.storeTimesMiddle(data);
+            _this.subscriptionB.unsubscribe();
+            _this.DurationAllBC(_this.MiddleToArray, _this.EndToArray);
+        });
+        //retrieves all the times when Maze C was triggered to find the average
+        this.subscriptionC = this.plotservice.getEntireSet('Tournament')
+            .valueChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (items) {
+            return items.map(function (item) {
+                return item.DetectedC;
+            });
+        })).subscribe(function (data) {
+            _this.storeTimesEnd(data);
+            _this.subscriptionC.unsubscribe();
+        });
+    };
+    TournamentComponent.prototype.navigateHome = function () {
+        this.router.navigate(['/home']);
     };
     /* function that stores the last time the Maze A was triggered
     *@param data: value of the last time difference
@@ -2408,6 +2499,13 @@ var TournamentComponent = /** @class */ (function () {
         else {
             this.durationLastAB = ("0" + hh + ":0" + mm + ":" + ss); //output
         }
+        if (hh !== hh || mm !== mm || ss != ss) {
+            // console.log("Nan input")
+        }
+        else {
+            this.durationSessionA.push(this.durationLastAB);
+        }
+        //console.log(this.durationLast)
     };
     /* function that finds the difference between the times of the last trial
     *@param dateStart: array that stores all Maze A times in correct date form
@@ -2430,14 +2528,50 @@ var TournamentComponent = /** @class */ (function () {
         else {
             this.durationLastBC = ("0" + hh + ":0" + mm + ":" + ss); //output
         }
+        if (hh !== hh || mm !== mm || ss != ss) {
+            // console.log("Nan input")
+        }
+        else {
+            this.durationSessionB.push(this.durationLastBC);
+        }
+        //console.log(this.durationLast)
     };
+    // /* function that finds the average of all times retrieved
+    // *@param avg: holds all the time differences
+    // */
+    // findAvgFunct(avg) {
+    // var sum = 0
+    // //console.log(avg)
+    // var times = avg
+    // var input = document.createElement('input')
+    // input.type = 'time'
+    // sum = times.reduce(function(prev, time) { //.reduce() sums up all the times 
+    //   input.value = time
+    //   return prev + input.valueAsNumber
+    // },0)
+    // input.valueAsNumber = sum / times.length // sum divided by the number of elements
+    // this.avg = input.value;
+    // }
     /* function that finds the average of all times retrieved
     *@param avg: holds all the time differences
     */
-    TournamentComponent.prototype.findAvgFunct = function (avg) {
+    TournamentComponent.prototype.findAvgFunctionAB = function () {
         var sum = 0;
-        //console.log(avg)
-        var times = avg;
+        var times = this.durationSessionA;
+        var input2 = document.createElement('input');
+        input2.type = 'time';
+        sum = times.reduce(function (prev, time) {
+            input2.value = time;
+            return prev + input2.valueAsNumber;
+        }, 0);
+        input2.valueAsNumber = sum / times.length; // sum divided by the number of elements
+        this.avgAB = input2.value;
+    };
+    TournamentComponent.prototype.findAvgFunctionBC = function () {
+        var sum = 0;
+        var times = [];
+        var times = this.durationSessionB;
+        console.log(times);
         var input = document.createElement('input');
         input.type = 'time';
         sum = times.reduce(function (prev, time) {
@@ -2445,37 +2579,8 @@ var TournamentComponent = /** @class */ (function () {
             return prev + input.valueAsNumber;
         }, 0);
         input.valueAsNumber = sum / times.length; // sum divided by the number of elements
-        this.avg = input.value;
+        this.avgBC = input.value;
     };
-    /* function that finds the average of all times retrieved
-    *@param avg: holds all the time differences
-    */
-    // // findAvgFunctAB(avg) {
-    // //   var sum = 0
-    // //   //console.log(avg)
-    // //   var times = avg
-    // //   var input = document.createElement('input')
-    // //   input.type = 'time'
-    // //   sum = times.reduce(function(prev, time) { //.reduce() sums up all the times 
-    // //     input.value = time
-    // //     return prev + input.valueAsNumber
-    // //   },0)
-    // //   input.valueAsNumber = sum / times.length // sum divided by the number of elements
-    // //   this.avgAB =input.value;
-    // //   }
-    // findAvgFunctBC(avg) {
-    //   var sum = 0
-    //   //console.log(avg)
-    //   var times = avg
-    //   var input = document.createElement('input')
-    //   input.type = 'time'
-    //   sum = times.reduce(function(prev, time) { //.reduce() sums up all the times 
-    //     input.value = time
-    //     return prev + input.valueAsNumber
-    //   },0)
-    //   input.valueAsNumber = sum / times.length // sum divided by the number of elements
-    //   this.avgBC =input.value;
-    //   }
     TournamentComponent.prototype.findAvgFunction = function () {
         var sum = 0;
         //console.log(avg)
@@ -2488,6 +2593,7 @@ var TournamentComponent = /** @class */ (function () {
         }, 0);
         input.valueAsNumber = sum / times.length; // sum divided by the number of elements
         this.avg = input.value;
+        console.log(times);
     };
     /* function that finds the difference between the times of all the trials
     *@param timesStart: array that stores all Maze A times in correct date form
@@ -2506,13 +2612,81 @@ var TournamentComponent = /** @class */ (function () {
             var ss = Math.floor(msec / 1000);
             msec -= ss * 1000;
             if (ss < 10) {
-                this.findAvg.push("0" + hh + ":0" + mm + ":0" + ss);
+                this.durationSession.push("0" + hh + ":0" + mm + ":0" + ss);
             }
             else {
-                this.findAvg.push("0" + hh + ":0" + mm + ":" + ss);
+                this.durationSession.push("0" + hh + ":0" + mm + ":" + ss);
+            }
+            //console.log(this.durationSession);
+        }
+    };
+    // QueryDuration() {
+    //   this.plotservice.getEntireSet('Tournament')
+    //     .valueChanges().pipe(map(items => { //first map
+    //       return items.map(item => { //second map
+    //         return item.DetectedA;
+    //       })
+    //     })).subscribe(data => {
+    //         this.storeTimesStart(data);
+    //         this.DurationAll(this.StartToArray,this.EndToArray);
+    //       })
+    //     //retrieves all the times when Maze C was triggered to find the avarage
+    //     this.plotservice.getEntireSet('Tournament')
+    //     .valueChanges().pipe(map(items => { //first map
+    //       return items.map(item => { //second map
+    //         return item.DetectedC;
+    //       })
+    //     })).subscribe(data => {
+    //         this.storeTimesEnd(data);
+    //     })
+    // }
+    /* function that finds the difference between the times of all the trials
+    *@param timesStart: array that stores all Maze A times in correct date form
+    *@param timesEnd: array that stores all Maze C times in correct date form
+    */
+    TournamentComponent.prototype.DurationAllAB = function (timesStart, timesEnd) {
+        var A = timesEnd;
+        var B = timesStart;
+        for (var i = 0; i < A.length; i++) {
+            var diff = A[i].getTime() - B[i].getTime();
+            var msec = diff;
+            var hh = Math.floor(msec / 1000 / 60 / 60);
+            msec -= hh * 1000 * 60 * 60;
+            var mm = Math.floor(msec / 1000 / 60);
+            msec -= mm * 1000 * 60;
+            var ss = Math.floor(msec / 1000);
+            msec -= ss * 1000;
+            if (ss < 10) {
+                this.durationSessionA.push("0" + hh + ":0" + mm + ":0" + ss);
+            }
+            else {
+                this.durationSessionA.push("0" + hh + ":0" + mm + ":" + ss);
             }
         }
-        this.findAvgFunct(this.findAvg); //function that finds average
+    };
+    /* function that finds the difference between the times of all the trials
+    *@param timesStart: array that stores all Maze A times in correct date form
+    *@param timesEnd: array that stores all Maze C times in correct date form
+    */
+    TournamentComponent.prototype.DurationAllBC = function (timesStart, timesEnd) {
+        var A = timesEnd;
+        var B = timesStart;
+        for (var i = 0; i < A.length; i++) {
+            var diff = A[i].getTime() - B[i].getTime();
+            var msec = diff;
+            var hh = Math.floor(msec / 1000 / 60 / 60);
+            msec -= hh * 1000 * 60 * 60;
+            var mm = Math.floor(msec / 1000 / 60);
+            msec -= mm * 1000 * 60;
+            var ss = Math.floor(msec / 1000);
+            msec -= ss * 1000;
+            if (ss < 10) {
+                this.durationSessionB.push("0" + hh + ":0" + mm + ":0" + ss);
+            }
+            else {
+                this.durationSessionB.push("0" + hh + ":0" + mm + ":" + ss);
+            }
+        }
     };
     TournamentComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
