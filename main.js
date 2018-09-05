@@ -215,12 +215,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tournament_tournament_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./tournament/tournament.component */ "./src/app/tournament/tournament.component.ts");
 /* harmony import */ var _gallery_reverse__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./gallery/reverse */ "./src/app/gallery/reverse.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm5/tooltip.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -296,7 +300,9 @@ var AppModule = /** @class */ (function () {
                     { path: 'statistics', component: _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_27__["StatisticsComponent"] },
                     { path: 'gallery', component: _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_22__["GalleryComponent"] },
                     { path: 'tournament', component: _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_22__["GalleryComponent"] }
-                ])
+                ]),
+                _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_32__["MatTooltipModule"],
+                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_33__["MatSnackBarModule"]
             ],
             entryComponents: [
                 _my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_24__["MyDialogComponent"]
@@ -709,7 +715,7 @@ var ReversePipe = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n<nav class=\"menu\" tabindex=\"0\">\n        <div class=\"smartphone-menu-trigger\"></div>\n      <header class=\"avatar\">\n            <img src=\"../../assets/img/logo.PNG\" />\n        <h2>Gorilla Game Lab</h2>\n      </header>\n        <ul>\n        <li tabindex=\"0\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n        <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n        <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n        <li tabindex=\"0\" class=\"icon-trial\" (click)=\"navigateTrial()\" routerlink=\"/statistics\"><span>Trial</span></li>\n        <li  tabindex=\"0\" class=\"icon-users\" (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n      </ul>\n    </nav>\n    \n    <main>\n      <div class=\"helper\">\n            <div class=\"right\">\n                <div class=\"container\">\n                    <div class id=bigChart>\n                    <div class=\"charts\" id=\"smallChart\" #chartAll>\n                        </div>\n                    </div>\n                    <div *ngFor = \"let photo of photo2\" class=\"chartsA\" >\n                        <img src=\"{{photo.value}}\"/>\n                       <p> Last Captured on {{ photo.date }} at {{ photo.time }} </p>\n\n                    </div>\n                    </div>\n                    <div class=\"charts\" #chartA>\n                        <p> Maze A Last Used: {{LastUsedA}} at {{LastDateUsedA}}</p>\n                        <P> Duration: {{DurationA}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartB>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n                    </div>\n                    <div class=\"charts\" #chartC>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartD>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartE>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartF>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    \n\n\n                    </div>\n      </div>\n    </main>\n</div>\n\n\n"
+module.exports = "<!-- <div>\n    <p *ngFor=\"let data of dataset | async\">{{data.value | json}}</p>\n</div> -->\n<div class=\"wrapper\">\n<nav class=\"menu\" tabindex=\"0\">\n        <div class=\"smartphone-menu-trigger\"></div>\n      <header class=\"avatar\">\n            <img src=\"../../assets/img/logo.PNG\" />\n        <h2>Gorilla Game Lab</h2>\n      </header>\n        <ul>\n        <li tabindex=\"0\" class=\"icon-dashboard\"><span>Live Monitoring</span></li>\n        <li tabindex=\"0\" class=\"icon-stats\" (click)=\"navigateStatistics()\" routerlink=\"/statistics\"><span>Statistics</span></li>\n        <li  tabindex=\"0\" class=\"icon-gallery\" (click)=\"navigateGallery()\" routerlink=\"/gallery\"> <span>Gallery</span></li>\n        <li tabindex=\"0\" class=\"icon-trial\" (click)=\"navigateTrial()\" routerlink=\"/statistics\"><span>Trial</span></li>\n        <li  tabindex=\"0\" class=\"icon-users\" (click)=\"logout()\" routerlink=\"/login\" *ngIf=\"isLoggedIn\"> <span>Logout</span></li>\n      </ul>\n    </nav>\n    \n    <main>\n      <div class=\"helper\">\n            <div class=\"right\">\n                <div class=\"container\">\n                    <div class id=bigChart>\n                    <div class=\"charts\" id=\"smallChart\" #chartAll>\n                        </div>\n                    </div>\n                    <div *ngFor = \"let photo of photo2\" class=\"chartsA\" >\n                        <img src=\"{{photo.value}}\"/>\n                       <p> Last Captured on {{ photo.date }} at {{ photo.time }} </p>\n\n                    </div>\n                    </div>\n                    <div class=\"charts\" #chartA>\n                        <p> Maze A Last Used: {{LastUsedA}} at {{LastDateUsedA}}</p>\n                    </div>\n                    <div class=\"charts\" #chartB>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                    </div>\n                    <div class=\"charts\" #chartC>\n                        <p> Maze C Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n\n                    </div>\n                    <!-- <div class=\"charts\" #chartD>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartE>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div>\n                    <div class=\"charts\" #chartF>\n                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>\n                        <P> Duration: {{DurationB}} min</P>\n\n                    </div> -->\n                    \n\n\n                    </div>\n      </div>\n    </main>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -820,7 +826,7 @@ var HomeComponent = /** @class */ (function () {
     //this function executes as well whenever any of the data changes to which we have subscribed to
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        //fetches the last photo that was captured and added to the gallery
+        //fetches the last photo that was captured and adds it to the gallery
         this.plotservice.getLastItem('Urls')
             .valueChanges().subscribe(function (data) {
             _this.getLastPhotoDetails(data);
@@ -836,9 +842,9 @@ var HomeComponent = /** @class */ (function () {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elAll.nativeElement); //this cleans graph whenever new value is added to database
             _this.monitorChartA(data);
             //REMOVE THISSSSS AND CALL ON ITS OWN WHEN BINDED TO THE RIGHT DATASET!!!!
-            _this.monitorChartD(data);
-            _this.monitorChartE(data);
-            _this.monitorChartF(data);
+            //this.monitorChartD(data);
+            //this.monitorChartE(data);
+            //this.monitorChartF(data);
             _this.returnA(data);
             _this.monitorChartAll(_this.SensorMazeA, _this.SensorMazeB, _this.SensorMazeC); //function that stores the values in observable taht is then being drawn on the next function call
         });
@@ -1104,111 +1110,111 @@ var HomeComponent = /** @class */ (function () {
         plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
         // Plotly.extendTraces(element,update,[0])
     };
-    /* Function used to create monitoring chart for maze D
-   @param data - object that stores the read value of sensor D
-   */
-    HomeComponent.prototype.monitorChartD = function (data) {
-        var element = this.elD.nativeElement;
-        var trace1 = {
-            type: 'scatter',
-            y: data,
-            line: {
-                color: '#fef65b',
-            }
-        };
-        var style = {
-            margin: {
-                l: 40,
-                r: 40,
-                b: 40,
-                t: 60,
-                pad: 4
-            },
-            autosize: false,
-            title: 'Maze D',
-            width: 350,
-            height: 200,
-            plot_bgcolor: '#161616',
-            paper_bgcolor: '#161616',
-            font: {
-                color: '#d3d3d3',
-                family: 'Raleway, Arial'
-            }
-        };
-        var formattedData = [trace1];
-        plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
-        // Plotly.extendTraces(element,update,[0])
-    };
-    /* Function used to create monitoring chart for maze E
-   @param data - object that stores the read value of sensor E
-   */
-    HomeComponent.prototype.monitorChartE = function (data) {
-        var element = this.elE.nativeElement;
-        var trace1 = {
-            type: 'scatter',
-            y: data,
-            line: {
-                color: '#329999',
-            }
-        };
-        var style = {
-            margin: {
-                l: 40,
-                r: 40,
-                b: 40,
-                t: 60,
-                pad: 4
-            },
-            autosize: false,
-            title: 'Maze E',
-            width: 350,
-            height: 200,
-            plot_bgcolor: '#161616',
-            paper_bgcolor: '#161616',
-            font: {
-                color: '#d3d3d3',
-                family: 'Raleway, Arial'
-            }
-        };
-        var formattedData = [trace1];
-        plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
-        // Plotly.extendTraces(element,update,[0])
-    };
-    /* Function used to create monitoring chart for maze F
-   @param data - object that stores the read value of sensor F
-   */
-    HomeComponent.prototype.monitorChartF = function (data) {
-        var element = this.elF.nativeElement;
-        var trace1 = {
-            type: 'scatter',
-            y: data,
-            line: {
-                color: '#ff748c',
-            }
-        };
-        var style = {
-            margin: {
-                l: 40,
-                r: 40,
-                b: 40,
-                t: 60,
-                pad: 4
-            },
-            autosize: false,
-            title: 'Maze F',
-            width: 350,
-            height: 200,
-            plot_bgcolor: '#161616',
-            paper_bgcolor: '#161616',
-            font: {
-                color: '#d3d3d3',
-                family: 'Raleway, Arial'
-            }
-        };
-        var formattedData = [trace1];
-        plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
-        // Plotly.extendTraces(element,update,[0])
-    };
+    //  /* Function used to create monitoring chart for maze D
+    // @param data - object that stores the read value of sensor D
+    // */
+    // monitorChartD(data) {
+    //   var element = this.elD.nativeElement
+    //   var trace1 = {
+    //     type: 'scatter',
+    //     y: data,
+    //     line: {
+    //       color: '#fef65b',
+    //     }
+    //   };
+    //   var style = {
+    //     margin: {
+    //       l: 40,
+    //       r: 40,
+    //       b: 40,
+    //       t: 60,
+    //       pad: 4
+    //     },
+    //     autosize: false,
+    //     title: 'Maze D',
+    //     width: 350,
+    //     height: 200,
+    //     plot_bgcolor: '#161616',
+    //     paper_bgcolor: '#161616',
+    //     font: {
+    //       color: '#d3d3d3',
+    //       family: 'Raleway, Arial'
+    //     }
+    //   }
+    //   var formattedData = [trace1];
+    //   Plotly.plot(element, formattedData, style)
+    //   // Plotly.extendTraces(element,update,[0])
+    // }
+    //  /* Function used to create monitoring chart for maze E
+    // @param data - object that stores the read value of sensor E
+    // */
+    // monitorChartE(data) {
+    //   var element = this.elE.nativeElement
+    //   var trace1 = {
+    //     type: 'scatter',
+    //     y: data,
+    //     line: {
+    //       color: '#329999',
+    //     }
+    //   };
+    //   var style = {
+    //     margin: {
+    //       l: 40,
+    //       r: 40,
+    //       b: 40,
+    //       t: 60,
+    //       pad: 4
+    //     },
+    //     autosize: false,
+    //     title: 'Maze E',
+    //     width: 350,
+    //     height: 200,
+    //     plot_bgcolor: '#161616',
+    //     paper_bgcolor: '#161616',
+    //     font: {
+    //       color: '#d3d3d3',
+    //       family: 'Raleway, Arial'
+    //     }
+    //   }
+    //   var formattedData = [trace1];
+    //   Plotly.plot(element, formattedData, style)
+    //   // Plotly.extendTraces(element,update,[0])
+    // }
+    //  /* Function used to create monitoring chart for maze F
+    // @param data - object that stores the read value of sensor F
+    // */
+    // monitorChartF(data) {
+    //   var element = this.elF.nativeElement
+    //   var trace1 = {
+    //     type: 'scatter',
+    //     y: data,
+    //     line: {
+    //       color: '#ff748c',
+    //     }
+    //   };
+    //   var style = {
+    //     margin: {
+    //       l: 40,
+    //       r: 40,
+    //       b: 40,
+    //       t: 60,
+    //       pad: 4
+    //     },
+    //     autosize: false,
+    //     title: 'Maze F',
+    //     width: 350,
+    //     height: 200,
+    //     plot_bgcolor: '#161616',
+    //     paper_bgcolor: '#161616',
+    //     font: {
+    //       color: '#d3d3d3',
+    //       family: 'Raleway, Arial'
+    //     }
+    //   }
+    //   var formattedData = [trace1];
+    //   Plotly.plot(element, formattedData, style)
+    //   // Plotly.extendTraces(element,update,[0])
+    // }
     /* Function used to create monitoring chart for all mazes at the same time
      @param sensor Maze A - object that stores the values for sensor A
      */
@@ -1247,7 +1253,7 @@ var HomeComponent = /** @class */ (function () {
                 pad: 4
             },
             autosize: true,
-            title: 'Maze A-G',
+            title: 'Maze A-C',
             plot_bgcolor: '#161616',
             paper_bgcolor: '#161616',
             font: {
@@ -1407,7 +1413,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <mat-dialog-content>\n    <p>Which Gorilla am I?</p>\n    </mat-dialog-content>\n    <mat-dialog-actions>\n      <mat-form-field>\n        \n      <mat-select  class=\"example-radio-group\">\n      <mat-option (click)=\"onCloseAfia()\">Afia</mat-option>\n      <mat-option (click)=\"onCloseAyana()\">Ayana</mat-option>\n      <mat-option (click)=\"onCloseJock()\">Jock</mat-option>\n      <mat-option (click)=\"onCloseKera()\">Kera</mat-option>\n      <mat-option (click)=\"onCloseKukena()\">Kukena</mat-option>\n      <mat-option (click)=\"onCloseRomina()\">Romina</mat-option>\n      <mat-option (click)=\"onCloseSalome()\">Salome</mat-option>\n      <mat-option (click)=\"onCloseTouni()\">Touni</mat-option>\n\n      </mat-select>\n    </mat-form-field>\n    </mat-dialog-actions>\n</div>\n"
+module.exports = "<div>\n  <mat-dialog-content>\n    <p>Which Gorilla am I?</p>\n    </mat-dialog-content>\n    <mat-dialog-actions>\n      <mat-form-field>\n        \n      <mat-select  class=\"example-radio-group\">\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseAfia();openSnackBar()\">Afia</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\" \n      (click)=\"onCloseAyana();openSnackBar()\">Ayana</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseJock();openSnackBar()\">Jock</mat-option>\n      <mat-option  matTooltip= \"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseKera();openSnackBar()\">Kera</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\"[matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseKukena();openSnackBar()\">Kukena</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseRomina();openSnackBar()\">Romina</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseSalome();openSnackBar()\">Salome</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseTouni();openSnackBar()\">Touni</mat-option>\n      <mat-option  matTooltip=\"Clicking the name will update the field\" [matTooltipPosition]=\"position.value\"\n      (click)=\"onCloseNotGorilla();openSnackBar()\">Not a gorilla</mat-option>\n\n      </mat-select>\n    </mat-form-field>\n    </mat-dialog-actions>\n</div>\n"
 
 /***/ }),
 
@@ -1418,7 +1424,7 @@ module.exports = "<div>\n  <mat-dialog-content>\n    <p>Which Gorilla am I?</p>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".example-user-input {\n  margin-right: 25px; }\n"
 
 /***/ }),
 
@@ -1435,6 +1441,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1451,12 +1458,22 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+
+
 var MyDialogComponent = /** @class */ (function () {
-    function MyDialogComponent(db, thisDialogRef, data) {
+    function MyDialogComponent(snackBar, db, thisDialogRef, data) {
+        this.snackBar = snackBar;
         this.db = db;
         this.thisDialogRef = thisDialogRef;
         this.data = data;
+        this.addExtraClass = false;
+        this.positionOptions = ['after', 'before', 'above', 'below', 'left', 'right'];
+        this.position = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.positionOptions[0]);
     }
+    MyDialogComponent.prototype.openSnackBar = function () {
+        this.snackBar.open('Update applied!', 'Close', { duration: 3000, panelClass: ['snackbar']
+        });
+    };
     MyDialogComponent.prototype.ngOnInit = function () {
     };
     //these sets of functions are called when the input is selected
@@ -1493,14 +1510,18 @@ var MyDialogComponent = /** @class */ (function () {
         this.thisDialogRef.close('Romina');
         this.db.list('Urls').update(this.data, { name: 'Romina' });
     };
+    MyDialogComponent.prototype.onCloseNotGorilla = function () {
+        this.thisDialogRef.close('Not a Gorilla');
+        this.db.list('Urls').update(this.data, { name: 'Not a gorilla' });
+    };
     MyDialogComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-my-dialog',
             template: __webpack_require__(/*! ./my-dialog.component.html */ "./src/app/my-dialog/my-dialog.component.html"),
             styles: [__webpack_require__(/*! ./my-dialog.component.scss */ "./src/app/my-dialog/my-dialog.component.scss")]
         }),
-        __param(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
-        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], String])
+        __param(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"], angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], String])
     ], MyDialogComponent);
     return MyDialogComponent;
 }());
@@ -1717,7 +1738,6 @@ var StatisticsComponent = /** @class */ (function () {
         this.plotservice.getVotes('Urls', 'Kera')
             .valueChanges().subscribe(function (data) {
             _this.getSumKera(data);
-            _this.completedGames();
             _this.voteChart(_this.Jock, _this.Kera, _this.Kukena, _this.Touni, _this.Afia, _this.Ayana, _this.Salome, _this.Romina);
         });
         //retrieving data for Gorilla Jock
@@ -1785,6 +1805,24 @@ var StatisticsComponent = /** @class */ (function () {
             plotly_js__WEBPACK_IMPORTED_MODULE_1__["purge"](_this.elPie.nativeElement);
             _this.getSumC(data);
             _this.pieChart(_this.SensorSumA, _this.SensorSumB, _this.SensorSumC);
+        });
+        this.plotservice.getEntireSet('IRsensorA')
+            .valueChanges()
+            .subscribe(function (data) {
+            _this.getSumIRA(data);
+            _this.completedGames(_this.IRA, _this.IRB, _this.IRC);
+        });
+        this.plotservice.getEntireSet('IRsensorB')
+            .valueChanges()
+            .subscribe(function (data) {
+            _this.getSumIRB(data);
+            _this.completedGames(_this.IRA, _this.IRB, _this.IRC);
+        });
+        this.plotservice.getEntireSet('IRsensorC')
+            .valueChanges()
+            .subscribe(function (data) {
+            _this.getSumIRC(data);
+            _this.completedGames(_this.IRA, _this.IRB, _this.IRC);
         });
         //   //retirieving data to determine the average for maze A
         //    this.plotservice.getEntireSet('SensorMazeA')
@@ -1862,7 +1900,7 @@ var StatisticsComponent = /** @class */ (function () {
         if (mm < 10) {
             month = '0' + month;
         }
-        var dateSelected = date + '-' + month + '-' + yyyy;
+        var dateSelected = month + '-' + date + '-' + yyyy;
         this.selectedDate = dateSelected; //storing the selected date in an object
         console.log(this.selectedDate);
         // querying data for maze A, and calling functions to plot the chart
@@ -1944,6 +1982,30 @@ var StatisticsComponent = /** @class */ (function () {
     StatisticsComponent.prototype.getSumRomina = function (data) {
         this.SumRomina = data;
         this.Romina = this.SumRomina.length;
+    };
+    /*function used to store all the records where the field value child has the following value
+  *@param data holds the corresponding value for the gorilla named 'Romina'
+  */
+    StatisticsComponent.prototype.getSumIRA = function (data) {
+        this.sumIRA = data;
+        this.IRA = this.sumIRA.length;
+        console.log(this.IRA);
+    };
+    /*function used to store all the records where the field value child has the following value
+    *@param data holds the corresponding value for the gorilla named 'Romina'
+    */
+    StatisticsComponent.prototype.getSumIRB = function (data) {
+        this.sumIRB = data;
+        this.IRB = this.sumIRB.length;
+        console.log(this.IRB);
+    };
+    /*function used to store all the records where the field value child has the following value
+    *@param data holds the corresponding value for the gorilla named 'Romina'
+    */
+    StatisticsComponent.prototype.getSumIRC = function (data) {
+        this.sumIRC = data;
+        this.IRC = this.sumIRC.length;
+        console.log(this.IRC);
     };
     /*function used to store the sum of maze A for the purpose of plotting it
       @param data - object storing the queried data
@@ -2069,33 +2131,6 @@ var StatisticsComponent = /** @class */ (function () {
                 color: '#6dc066',
             }
         };
-        var trace4 = {
-            x: ['Maze D'],
-            y: [123],
-            width: [0.7],
-            type: 'bar',
-            marker: {
-                color: '#fef65b',
-            }
-        };
-        var trace5 = {
-            x: ['Maze E'],
-            y: [323],
-            width: [0.7],
-            type: 'bar',
-            marker: {
-                color: '#329999',
-            }
-        };
-        var trace6 = {
-            x: ['Maze F'],
-            y: [134],
-            width: [0.7],
-            type: 'bar',
-            marker: {
-                color: '#ff748c',
-            }
-        };
         var style = {
             margin: {
                 l: 40,
@@ -2116,14 +2151,14 @@ var StatisticsComponent = /** @class */ (function () {
                 family: 'Raleway, Arial'
             }
         };
-        var formattedData = [trace1, trace2, trace3, trace4, trace5, trace6];
+        var formattedData = [trace1, trace2, trace3];
         plotly_js__WEBPACK_IMPORTED_MODULE_1__["plot"](element, formattedData, style);
     };
-    StatisticsComponent.prototype.completedGames = function () {
+    StatisticsComponent.prototype.completedGames = function (IRA, IRB, IRC) {
         var element = this.elCompletedGames.nativeElement;
         var trace1 = {
-            x: ['Maze A', 'Maze B', 'Maze C', 'Maze D', 'Maze E', 'Maze F'],
-            y: [22, 22, 22, 22, 22, 22],
+            x: ['Maze A', 'Maze B', 'Maze C'],
+            y: [IRA, IRB, IRC],
             name: 'Started Games',
             width: [0.7],
             type: 'bar',
@@ -2132,8 +2167,8 @@ var StatisticsComponent = /** @class */ (function () {
             }
         };
         var trace2 = {
-            x: ['Maze A', 'Maze B', 'Maze C', 'Maze D', 'Maze E', 'Maze F'],
-            y: [20, 14, 16, 12, 18, 15],
+            x: ['Maze A', 'Maze B', 'Maze C'],
+            y: [IRB, IRC, IRC],
             name: 'Completed Games',
             width: [0.7],
             type: 'bar',
@@ -2272,7 +2307,7 @@ var StatisticsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"wrapper\">\n<div class=\"topDiv\">\n    <p tabindex=\"0\" class=\"link\" (click)=\"navigateHome()\" routerlink=\"/home\"><span>Navigate Home</span></p>\n  <h1 class=\"heading\">How fast can YOU solve the maze?</h1>\n    \n    <div *ngFor = \"let score of durationSession\" class=\"score\" >\n      <p> {{score}}</p>\n    </div>\n</div>    \n<div class=\"bottomDiv\">\n      <h1>{{durationLast}}</h1>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze A: </span><span style=\"font-size: 18px\">{{durationLastAB}}</span></p>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze B: </span><span style=\"font-size: 18px\">{{durationLastBC}}</span></p>\n      <button mat-button (click)=\"findAvgFunction(); findAvgFunctionAB(); findAvgFunctionBC();\">Get Average</button>\n      <p><span style=\"font-size: 18px\"><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Total: </span>{{avg}} <span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\"> Maze A: </span> {{avgAB}} <span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\" >Maze B: </span> {{avgBC}}</span></p>\n    </div>\n\n\n</div>"
+module.exports = "\n<div class=\"wrapper\">\n<div class=\"topDiv\">\n    <p tabindex=\"0\" class=\"link\" (click)=\"navigateHome()\" routerlink=\"/home\"><span>Navigate Home</span></p>\n  <h1 class=\"heading\">How fast can YOU solve the maze?</h1>\n    \n    <div *ngFor = \"let score of durationSession\" class=\"score\" >\n      <p> {{score}}</p>\n    </div>\n</div>    \n<div class=\"bottomDiv\">\n      <h1>{{durationLast}}</h1>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze A: </span><span style=\"font-size: 18px\">{{durationLastAB}}</span></p>\n      <p><span style=\"font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;\">Maze B: </span><span style=\"font-size: 18px\">{{durationLastBC}}</span></p>\n      <button mat-button (click)=\"findAvgFunction(); findAvgFunctionAB(); findAvgFunctionBC();\">Get Average</button>\n      <p><span style=\"font-size: 18px\"><span style=\"font-family: 'Raleway', 'Arial';  font-size: 20px;\"> <span style= \"color:#fff;\">Total:</span> {{avg}} <span style= \"color:#fff;\"> Maze A: </span> {{avgAB}}  <span style= \"color:#fff;\"> Maze B:</span> {{avgBC}}</span></span></p>\n    </div>\n\n\n</div>"
 
 /***/ }),
 
