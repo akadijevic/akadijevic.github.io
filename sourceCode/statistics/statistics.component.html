@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <nav class="menu" tabindex="0">
+          <div class="smartphone-menu-trigger"></div>
+        <header class="avatar">
+              <img src="../../assets/img/logo.PNG" />
+          <h2>Gorilla Game Lab</h2>
+        </header>
+          <ul>
+          <li tabindex="0" class="icon-dashboard" (click)="navigateHome()" routerlink="/home"><span>Live Monitoring</span></li>
+          <li tabindex="0" class="icon-stats" (click)="navigateStatistics()" routerlink="/statistics"><span>Statistics</span></li>
+          <li  tabindex="0" class="icon-gallery" (click)="navigateGallery()" routerlink="/gallery"> <span>Gallery</span></li>
+          <li tabindex="0" class="icon-trial" (click)="navigateTrial()" routerlink="/statistics"><span>Trial</span></li>
+          <li  tabindex="0" class="icon-users"(click)="logout()" routerlink="/login" *ngIf="isLoggedIn"> <span>Logout</span></li>
+        </ul>
+      </nav>
+      
+      <main>
+        <div class="helper">
+              <div class="right">
+                      <div class="charts" #Piechart>
+                      </div>
+
+                      <div  class="charts" #Votechart>
+                        
+                        </div>
+                        
+                      <div  class="charts" #Barchart2>
+                        
+                        </div>
+                      <div class="charts">
+                            <div #Barchart>
+                              
+                              </div>
+                        <mat-form-field class="example-full-width">
+                        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date"  [ngModel]="selectedDate" (ngModelChange)='selectedDate = onDateSelected($event)'>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                      </div>
+                     
+                      <!-- <p> Jock: {{Jock}}</p>
+                      <p> Kera: {{Kera}}</p>
+                      <p> Kukena: {{Kukena}}</p>
+                      <p> Touni: {{Touni}}</p>
+                      <p> Afia: {{Afia}}</p>
+                      <p> Ayana: {{Ayana}}</p>
+                      <p> Salome: {{Salome}}</p>
+                      <p> Romina: {{Romina}}</p> -->
+                     
+
+                </div>
+        </div>
+      </main>
+  </div>
