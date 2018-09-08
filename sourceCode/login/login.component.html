@@ -1,0 +1,19 @@
+<section class="login-form-wrap">
+    <img src="../../assets/img/logo.PNG">
+    <form class="login-form" autocomplete="off" novalidate [formGroup]="form" (submit)="login()">
+      <label>
+          <input type="email" name="user" placeholder="Email Address"  formControlName="email" required />
+        </label>
+      <label>
+          <input type="password" name="pass" placeholder="Password" formControlName="password" required />
+        </label>
+        <input type="submit" name="login" value="Log In"/>
+      </form>
+  </section>
+<!-- <div class="login">
+  <form autocomplete="off" novalidate [formGroup]="form" (submit)="login()">
+    <input type="email" name="user" placeholder="Email Address"  formControlName="email" />
+    <input type="password" name="pass" placeholder="Password" formControlName="password" />
+    <button type="submit" name="login" class="btn btn-primary btn-block btn-large" value="login">Login</button>
+    </form>
+</div> -->
