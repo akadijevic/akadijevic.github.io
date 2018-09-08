@@ -1,0 +1,67 @@
+<!-- <div>
+    <p *ngFor="let data of dataset | async">{{data.value | json}}</p>
+</div> -->
+<div class="wrapper">
+<nav class="menu" tabindex="0">
+        <div class="smartphone-menu-trigger"></div>
+      <header class="avatar">
+            <img src="../../assets/img/logo.PNG" />
+        <h2>Gorilla Game Lab</h2>
+      </header>
+        <ul>
+        <li tabindex="0" class="icon-dashboard"><span>Live Monitoring</span></li>
+        <li tabindex="0" class="icon-stats" (click)="navigateStatistics()" routerlink="/statistics"><span>Statistics</span></li>
+        <li  tabindex="0" class="icon-gallery" (click)="navigateGallery()" routerlink="/gallery"> <span>Gallery</span></li>
+        <li tabindex="0" class="icon-trial" (click)="navigateTrial()" routerlink="/statistics"><span>Trial</span></li>
+        <li  tabindex="0" class="icon-users" (click)="logout()" routerlink="/login" *ngIf="isLoggedIn"> <span>Logout</span></li>
+      </ul>
+    </nav>
+    
+    <main>
+      <div class="helper">
+            <div class="right">
+                <div class="container">
+                    <div class id=bigChart>
+                    <div class="charts" id="smallChart" #chartAll>
+                        </div>
+                    </div>
+                    <div *ngFor = "let photo of photo2" class="chartsA" >
+                        <img src="{{photo.value}}"/>
+                       <p> Last Captured on {{ photo.date }} at {{ photo.time }} </p>
+
+                    </div>
+                    </div>
+                    <div class="charts" #chartA>
+                        <p> Maze A Last Used: {{LastUsedA}} at {{LastDateUsedA}}</p>
+                    </div>
+                    <div class="charts" #chartB>
+                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>
+                    </div>
+                    <div class="charts" #chartC>
+                        <p> Maze C Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>
+
+                    </div>
+                    <!-- <div class="charts" #chartD>
+                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>
+                        <P> Duration: {{DurationB}} min</P>
+
+                    </div>
+                    <div class="charts" #chartE>
+                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>
+                        <P> Duration: {{DurationB}} min</P>
+
+                    </div>
+                    <div class="charts" #chartF>
+                        <p> Maze B Last Used: {{LastUsedB}} at {{LastDateUsedB}}</p>
+                        <P> Duration: {{DurationB}} min</P>
+
+                    </div> -->
+                    
+
+
+                    </div>
+      </div>
+    </main>
+</div>
+
+
