@@ -1,0 +1,31 @@
+<div>
+  <mat-dialog-content>
+    <p>Which Gorilla am I?</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <mat-form-field>
+        
+      <mat-select  class="example-radio-group">
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseAfia();openSnackBar()">Afia</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value" 
+      (click)="onCloseAyana();openSnackBar()">Ayana</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseJock();openSnackBar()">Jock</mat-option>
+      <mat-option  matTooltip= "Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseKera();openSnackBar()">Kera</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field"[matTooltipPosition]="position.value"
+      (click)="onCloseKukena();openSnackBar()">Kukena</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseRomina();openSnackBar()">Romina</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseSalome();openSnackBar()">Salome</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseTouni();openSnackBar()">Touni</mat-option>
+      <mat-option  matTooltip="Clicking the name will update the field" [matTooltipPosition]="position.value"
+      (click)="onCloseNotGorilla();openSnackBar()">Not a gorilla</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    </mat-dialog-actions>
+</div>
