@@ -1,0 +1,20 @@
+
+<div class="wrapper">
+<div class="topDiv">
+    <p tabindex="0" class="link" (click)="navigateHome()" routerlink="/home"><span>Navigate Home</span></p>
+  <h1 class="heading">How fast can YOU solve the maze?</h1>
+    
+    <div *ngFor = "let score of durationSession" class="score" >
+      <p> {{score}}</p>
+    </div>
+</div>    
+<div class="bottomDiv">
+      <h1>{{durationLast}}</h1>
+      <p><span style="font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;">Maze A: </span><span style="font-size: 18px">{{durationLastAB}}</span></p>
+      <p><span style="font-family: 'Raleway', 'Arial'; color:#fff; font-size: 20px;">Maze B: </span><span style="font-size: 18px">{{durationLastBC}}</span></p>
+      <button mat-button (click)="findAvgFunction(); findAvgFunctionAB(); findAvgFunctionBC();">Get Average</button>
+      <p><span style="font-size: 18px"><span style="font-family: 'Raleway', 'Arial';  font-size: 20px;"> <span style= "color:#fff;">Total:</span> {{avg}} <span style= "color:#fff;"> Maze A: </span> {{avgAB}}  <span style= "color:#fff;"> Maze B:</span> {{avgBC}}</span></span></p>
+    </div>
+
+
+</div>
