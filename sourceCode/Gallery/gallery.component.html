@@ -1,0 +1,59 @@
+<!-- <div>
+    <p *ngFor="let data of dataset | async">{{data.value | json}}</p>
+</div> -->
+<div class="wrapper">
+    <nav class="menu" tabindex="0">
+            <div class="smartphone-menu-trigger"></div>
+          <header class="avatar">
+                <img src="../../assets/img/logo.PNG" />
+            <h2>Gorilla Game Lab</h2>
+          </header>
+            <ul>
+            <li tabindex="0" (click)="navigateHome()"routerlink="/home" class="icon-dashboard"><span>Live Monitoring</span></li>
+            <li tabindex="0" class="icon-stats" (click)="navigateStatistics()" routerlink="/statistics"><span>Statistics</span></li>
+            <li  tabindex="0" class="icon-gallery"><a (click)="navigateGallery()" routerlink="/gallery"> <span>Gallery</span></a></li>
+            <li tabindex="0" class="icon-trial" (click)="navigateTrial()" routerlink="/statistics"><span>Trial</span></li>
+            <li  tabindex="0" class="icon-users"><a (click)="logout()" routerlink="/login" *ngIf="isLoggedIn"> <span>Logout</span></a></li>
+          </ul>
+        </nav>
+        
+        <main>
+          <div class="helper">
+                <div class="right">
+                  <div class="filter">
+                    <mat-form-field>
+                        <mat-select  class="example-radio-group" placeholder="Filter by name">
+
+                        <mat-option (click)="onDefault()">Default</mat-option>
+                        <mat-option (click)="onUnknown()">Unknown</mat-option>
+                        <mat-option (click)="onAfia()">Afia</mat-option>
+                        <mat-option (click)="onAyana()">Ayana</mat-option>
+                        <mat-option (click)="onJock()">Jock</mat-option>
+                        <mat-option (click)="onKera()">Kera</mat-option>
+                        <mat-option (click)="onKukena()">Kukena</mat-option>
+                        <mat-option (click)="onRomina()">Romina</mat-option>
+                        <mat-option (click)="onSalome()">Salome</mat-option>
+                        <mat-option (click)="onTouni()">Touni</mat-option>
+                  
+                  
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="row"> 
+                        <div class="column" *ngFor="let photo of photo2 | reverse">
+                        <img src="{{photo.value}}"  class="imagepreview" style="width: 100%;" >
+                        <p> {{photo.name}}</p>
+                        <button mat-raised-button id="{{photo.key}}"(click)="openDialog(photo.key)">recognize me? </button>
+                        <br>
+                          <!-- <p>Result:{{dialogResult}}</p> -->
+                        </div>
+
+
+                </div> 
+         </div>
+        
+        </div>
+
+       </main>
+ </div>
+    
